@@ -63,17 +63,21 @@
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										Module Overview and Introduction
+										Computational Problems Involving Probability
 									</a>
 									<ul class="dropdown-menu" role="menu">
 										<li class="dropdown-header">Topics</li>
 										
-										<li class="active">
+										<li >
 											<a href="../../topics/00-Module_Overview_and_Introduction/index.html">Module Overview and Introduction</a>
 										</li>
 										
 										<li >
 											<a href="../../topics/01-Exploratory_Data_Analysis/index.html">Exploratory Data Analysis</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../topics/02-Computational_Problems_Involving_Probability/index.html">Computational Problems Involving Probability</a>
 										</li>
 										
 										<li >
@@ -102,15 +106,19 @@
 										<li class="dropdown-header">Resources</li>
 										
 										<li >
-											<a href="#01-Module_Overview">Module Overview</a>
+											<a href="#01-Review_of_Probability_Concepts">Review of Probability Concepts</a>
 										</li>
 										
 										<li >
-											<a href="#02-Review_of_scientific_python_programming">Review of scientific python programming</a>
+											<a href="#02-Conditional_Probability_and_Bayes_Rule">Conditional Probability and Bayes Rule</a>
 										</li>
 										
 										<li >
-											<a href="#03-Open_Colab">Open Colab</a>
+											<a href="#10-Discrete_Random_Variables">Discrete Random Variables</a>
+										</li>
+										
+										<li >
+											<a href="#20-Continuous_Random_Variables">Continuous Random Variables</a>
 										</li>
 										
 									</ul>
@@ -146,7 +154,7 @@
 		<!-- topic meta -->
 		<div class="panel panel-info">
 			<div class="panel-heading">	
-				<h3 class="panel-title">Module Overview and Introduction</h3>
+				<h3 class="panel-title">Computational Problems Involving Probability</h3>
 			</div>
 			<div class="panel-body" style="color:gray">
 				
@@ -155,7 +163,7 @@
 				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="width:170px">
 							<img class="km" src="topic.png" width="100%" alt=""></div>
 				        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-							<span><p>Outline of module, list of resources, etc. and a review quiz on computational skills covered in last year's <em>Computational Tools and Environments</em>.</p></span>
+							<span><p>Given that most of the problems that we will study this semester  will have a stochastic component we will start with a review core  concepts in probability and some of their applications.</p></span>
 							<ul>
 								
 							</ul>
@@ -173,28 +181,24 @@
 				
 
 <li class="media">
-	<a class="kmaa" id="01-Module_Overview"></a>
+	<a class="kmaa" id="01-Review_of_Probability_Concepts"></a>
 	<span class=" fa  fa-book pull-left kmheading" style="font-size:200%"></span>
 	<div class="media-body">
-		<h4 class="media-heading kmheading">Module Overview</h4>
-		<span>A short presentation on the module - aims, proposed content, contact hours and assessment structure. These slides document describes how the Autumn 2020 version of the module, as specified in the official module descriptor, will be realised.</span>
+		<h4 class="media-heading kmheading">Review of Probability Concepts</h4>
+		<span>Summary of probability concepts with python implementations of examples.</span>
 		<div></div>
 		<ul>
 			
-			<li>Aim and motivation for this module</li>
+			<li>Fundmental concepts in probability</li>
 			
-			<li>Administration trivia --- Contact hours, Assessment structure, \ldots</li>
-			
-			<li>Tools and resources</li>
-			
-			<li>Changes due to COVID</li>
+			<li>Laws of probability</li>
 			
 		</ul>
 		<ul class="pager">
 			
-		  	<li><a class="kmpill" href="01-Module_Overview/00-01-Module_Overview-Slides-Handout.pdf" >Handout</a></li>
+		  	<li><a class="kmpill" href="01-Review_of_Probability_Concepts/02-01-Review_of_Probability_Concepts-Slides-Handout.pdf" >Handout</a></li>
 			
-		  	<li><a class="kmpill" href="01-Module_Overview/00-01-Module_Overview-Slides-Presentation.pdf" >Presentation</a></li>
+		  	<li><a class="kmpill" href="01-Review_of_Probability_Concepts/02-01-Review_of_Probability_Concepts-Slides-Presentation.pdf" >Presentation</a></li>
 			
 		</ul>
 	</div>
@@ -203,18 +207,24 @@
 				
 
 <li class="media">
-	<a class="kmaa" id="02-Review_of_scientific_python_programming"></a>
-	<span class=" fa fa-question pull-left kmheading" style="font-size:200%"></span>
+	<a class="kmaa" id="02-Conditional_Probability_and_Bayes_Rule"></a>
+	<span class=" fa  fa-book pull-left kmheading" style="font-size:200%"></span>
 	<div class="media-body">
-		<h4 class="media-heading kmheading">Review of scientific python programming</h4>
-		<span>Short Moodle quiz covering core numerical problems such as root finding, quadrature, curve fitting etc.</span>
+		<h4 class="media-heading kmheading">Conditional Probability and Bayes Rule</h4>
+		<span>Conditional probability and Bayes Theorem</span>
 		<div></div>
 		<ul>
+			
+			<li>Non-independent events</li>
+			
+			<li>Bayes Theorem</li>
 			
 		</ul>
 		<ul class="pager">
 			
-		  	<li><a class="kmpill" href="https://moodle.wit.ie/mod/quiz/view.php?id=3822632" >Open Moodle Quiz</a></li>
+		  	<li><a class="kmpill" href="02-Conditional_Probability_and_Bayes_Rule/02-02-Conditional_Probability_and_Bayes_Rule-Slides-Handout.pdf" >Handout</a></li>
+			
+		  	<li><a class="kmpill" href="02-Conditional_Probability_and_Bayes_Rule/02-02-Conditional_Probability_and_Bayes_Rule-Slides-Presentation.pdf" >Presentation</a></li>
 			
 		</ul>
 	</div>
@@ -223,18 +233,50 @@
 				
 
 <li class="media">
-	<a class="kmaa" id="03-Open_Colab"></a>
-	<span class=" fa fa-laptop pull-left kmheading" style="font-size:200%"></span>
+	<a class="kmaa" id="10-Discrete_Random_Variables"></a>
+	<span class=" fa  fa-book pull-left kmheading" style="font-size:200%"></span>
 	<div class="media-body">
-		<h4 class="media-heading kmheading">Open Colab</h4>
-		<span><p>We will use <a href="https://colab.research.google.com/notebooks/intro.ipynb">Google's colab environment</a> for all of our computational activity.</p></span>
-		<div><p><center><a href="https://colab.research.google.com/#create=true"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> </center></p></div>
+		<h4 class="media-heading kmheading">Discrete Random Variables</h4>
+		<span>General theory of discrete random variables and some important discrete probability distributions.</span>
+		<div></div>
 		<ul>
+			
+			<li>Discrete random variables</li>
+			
+			<li>Uniform, Bernoulli, Binomial, Poisson</li>
 			
 		</ul>
 		<ul class="pager">
 			
-		  	<li><a class="kmpill" href="http://colab.research.google.com/github/discretemathematics-202122/live/blob/main/topics/00-Module_Overview_and_Introduction/03-Open_Colab/files/Open_Colab.ipynb" >Open in Colab</a></li>
+		  	<li><a class="kmpill" href="10-Discrete_Random_Variables/02-10-Discrete_Random_Variables-Slides-Handout.pdf" >Handout</a></li>
+			
+		  	<li><a class="kmpill" href="10-Discrete_Random_Variables/02-10-Discrete_Random_Variables-Slides-Presentation.pdf" >Presentation</a></li>
+			
+		</ul>
+	</div>
+</li>
+			
+				
+
+<li class="media">
+	<a class="kmaa" id="20-Continuous_Random_Variables"></a>
+	<span class=" fa  fa-book pull-left kmheading" style="font-size:200%"></span>
+	<div class="media-body">
+		<h4 class="media-heading kmheading">Continuous Random Variables</h4>
+		<span>General theory of continuous random variables and some important continuous probability distributions.</span>
+		<div></div>
+		<ul>
+			
+			<li>Continuous random variables</li>
+			
+			<li>Uniform, Exponential, Normal</li>
+			
+		</ul>
+		<ul class="pager">
+			
+		  	<li><a class="kmpill" href="20-Continuous_Random_Variables/02-20-Continuous_Random_Variables-Slides-Handout.pdf" >Handout</a></li>
+			
+		  	<li><a class="kmpill" href="20-Continuous_Random_Variables/02-20-Continuous_Random_Variables-Slides-Presentation.pdf" >Presentation</a></li>
 			
 		</ul>
 	</div>

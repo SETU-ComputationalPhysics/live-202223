@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Computational Physics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192450" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192450" target="_blank"><img height="18pt" src="../../../style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+										<li >
+											<a href="../../../topics/01-Exploratory_Data_Analysis/index.html">Exploratory Data Analysis</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Computational_Problems_Involving_Probability/index.html">Computational Problems Involving Probability</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Computational_Problems_involving_Marko_Chains/index.html">Computational Problems involving Marko Chains</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html">Computational Problems involving Monte Carlo techniques</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html#01-Introduction_to_Monte_Carlo">Introduction to Monte Carlo</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html#02-Application_-_Reactor_Shield">Application - Reactor Shield</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html#03-Application_-_Ising_Model">Application - Ising Model</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>1D Model</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li >
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+										<li class="active">
+											<a href="01-1D_Model.html">1D Model</a>
+										</li>
+										
+										<li >
+											<a href="02-2D_Model.html">2D Model</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous"><a href="00-Outline.html">&larr; Previous (Outline)</a></li>
+			
+			
+			
+			<li class="next"><a href="02-2D_Model.html">Next (2D Model) &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>1D Isling Model</h1>
+<p>We will cover this task during the lab session, and will use a similar implementation for the main problem, the 2D Ising model.</p>
+<h2>Setup</h2>
+<p>To keep things simple we pick units so that both \(J\) and \(k_B\) are effectively one. Then the average energy per spin site is
+\[
+    \langle E\rangle = 
+    - \frac{1}{\text{number of sites}} \frac{1}{2}
+    \sum_{
+         \begin{array}{c} 
+             \text{over all}\\ \text{sites \(i\)}
+         \end{array}
+    }
+    \sum_{
+        \begin{array}{c} 
+        \text{over all}\\ \text{neighbours \(j\)}
+        \end{array}
+    }
+    s_i \cdot s_j
+\]
+and the magnetisation per site is 
+\[
+    \langle M\rangle = 
+    \frac{1}{\text{number of sites}}
+    \sum_{
+         \begin{array}{c} 
+             \text{over all}\\ \text{sites \(i\)}
+         \end{array}
+    }
+    s_i
+\]
+And the transition probability when flipping to a higher energy state (difference \(\Delta E\)) is 
+\[
+    p = e^{-\Delta E / T}
+\]</p>
+<h2>Initialise model</h2>
+<p>Implement function </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<p>which returns an 1D array of <code>n</code> elements. The each element are -1/+1 with probability 0.5. So a possible output of <code>init(20)</code> is </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">[</span> <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+<h2>Graphically represent model</h2>
+<p>Implement function </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<p>which displays the model using <code>plt.imshow</code> using optional width and title. So a possible output of <code>show(model, title="time = start")</code> is </p>
+<figure>
+  <img src="files/1D_show.png" alt="1D_show" width="100%" >
+  <figcaption>Output of function, show.</figcaption>
+</figure>
+
+<h2>Compute energy per spin site</h2>
+<p>Implement function </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">energy</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<p>which computes the energy per spin site in <code>model</code> due to spin of neighbouring sites. This function should return values in range -1 (for all spin up) to 1 (all spin down).</p>
+<h2>Compute bulk magnetisation per spin site</h2>
+<p>Implement function </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">magnetization</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<p>which computes the bulk magnetisation per spin site in <code>model</code>. This function should return values in range -1 (for all spin down) to 1 (all spin up). (Note the difference with energy.)</p>
+<h2>Simulate model</h2>
+<p>Implement function</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">def</span> <span class="nv">simulate</span><span class="ss">(</span><span class="nv">model</span>, <span class="nv">T</span>, <span class="nv">t_steps</span>, <span class="nv">debug</span><span class="o">=</span><span class="nv">False</span><span class="ss">)</span>:
+
+    <span class="k">return</span>
+</code></pre></div>
+</td></tr></table>
+<p>which performs <code>t_steps</code> Monte Carlo iterations on <code>model</code>.  I used the optional parameter <code>debug</code> to print out the usual debug info.</p>
+<p>We can now use this function to study the behaviour of the model.</p>
+<h2>Generate results</h2>
+<p>Using code like</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">save_model</span> <span class="o">=</span> <span class="n">init</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">show</span><span class="p">(</span><span class="n">save_model</span><span class="p">,</span> <span class="s2">&quot;Start&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">save_model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10_000</span><span class="p">)</span>   
+    <span class="n">show</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;End&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>we are able to run a simulation of the same starting state under different conditions.</p>
+<h3>Low temperature</h3>
+<p>First when the temperature is low the transition probability limit for a site to flip to a higher state is closer to one so less likely to occur. Hence we expect a trend towards lower energy states </p>
+<p>Taking the same initial state:</p>
+<figure>
+  <img src="files/1D_start_low_temp.png" alt="1D_show" width="100%" >
+</figure>
+
+<p>And re-running simulation for 10,000 steps with \(T=0.1\) we get </p>
+<figure>
+  <img src="files/1D_end_low_temp_0.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_low_temp_1.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_low_temp_2.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_low_temp_3.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_low_temp_4.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_low_temp_5.png" alt="1D_show" width="100%" >
+</figure>
+
+<p>So system converges to either state where the spins are aligned.</p>
+<h3>High temperature</h3>
+<p>Re-running same experiment, using same initial state, for high temperature (\(T=5\)) get </p>
+<figure>
+  <img src="files/1D_end_high_temp_0.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_high_temp_1.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_high_temp_2.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_high_temp_3.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_high_temp_4.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_high_temp_5.png" alt="1D_show" width="100%" >
+</figure>
+
+<p>So system don't get alignment of spins and at a local level, the prediction of spins is impossible.</p>
+<h3>Goldilocks temperature</h3>
+<p>So what about temperatues that are not too low nor too high?  </p>
+<p>Re-running same experiment, using same initial state, for temperature (\(T=1\)) get </p>
+<figure>
+  <img src="files/1D_end_middle_temp_0.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_middle_temp_1.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_middle_temp_2.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_middle_temp_3.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_middle_temp_4.png" alt="1D_show" width="100%" >
+  <img src="files/1D_end_middle_temp_5.png" alt="1D_show" width="100%" >
+</figure>
+
+<p>We get regions of spin alignment. I think the probability distribution of the size of regions is known but I know that I don't know it. These regions are not fixed and "slowly" change over time.</p>
+<h3>Evolution of magnetisation</h3>
+<p>Rather than looking at the start and end point we can call the function <code>simulate</code> inside a <code>for</code> loop and compute the magnetisation over time, using code like:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">mag</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">init</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">mag</span> <span class="o">+=</span> <span class="p">[</span><span class="n">magnetization</span><span class="p">(</span><span class="n">model</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
+<figure>
+  <img src="files/1D_Magentisation_low_temp.png" alt="1D_show" width="30%" >
+  <img src="files/1D_Magentisation_middle_temp.png" alt="1D_show" width="30%" >
+  <img src="files/1D_Magentisation_high_temp.png" alt="1D_show" width="30%" >
+  <figcaption>Evolution of magnetisation over time.</figcaption>
+</figure>
+
+<h3>Effect of Temperature</h3>
+<p>To examine the effect of temperature we run the following algorithm:</p>
+<ul>
+<li>To generate a large (say 400) number of points<ul>
+<li>Pick a random Temperature in the interval (0,5].</li>
+<li>initialise the model</li>
+<li>run simulation for a large number of steps</li>
+<li>compute and store the energy and magnetisation</li>
+</ul>
+</li>
+</ul>
+<p>The corresponding code is </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">400</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">init</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">100_000</span><span class="p">)</span>
+
+    <span class="n">mag</span> <span class="o">=</span> <span class="n">magnetization</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">mag</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>and the resulting plot using </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Phase Transition&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Magnetisation&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Temperature&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<figure>
+  <img src="files/1D_Phase_Transition_noisy.png" alt="1D_show" width="80%" >
+  <figcaption>Evolution of magnetisation over time.</figcaption>
+</figure>
+
+<p>This is very noisy and difficult to see, so we need to tweak our algorithm by:</p>
+<ul>
+<li>Running the simulation to let it "burn-in".</li>
+<li>Use multiple measurements of energy and magnetisation over a run.</li>
+</ul>
+<p>The updated code is</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">400</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">init</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">50_000</span><span class="p">)</span>
+
+    <span class="n">mag</span> <span class="o">=</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+        <span class="n">mag</span> <span class="o">+=</span> <span class="n">magnetization</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">+=</span> <span class="n">energy</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">e</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">mag</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>and the resulting plot is</p>
+<figure>
+  <img src="files/1D_Phase_Transition_good.png" alt="1D_show" width="80%" >
+  <figcaption>Evolution of magnetisation over time.</figcaption>
+</figure>
+
+<p>This is much better. Now we can see that something fundmental happens around \(T=1\), where the model switches from the low temperature state to the high temperature states. This temperature, \(T=1\), is called the critical temperature. We want to determine the corresponding critical temperature for the 2D model.</p>
+<p>The corresponding energy plot is</p>
+<figure>
+  <img src="files/1D_Energy.png" alt="1D_show" width="80%" >
+  <figcaption>Evolution of magnetisation over time.</figcaption>
+</figure>
+
+<h3>Comments</h3>
+<p>There are a number of (optional) improvements that can be made to this implementation. In particular</p>
+<ul>
+<li>The computational effort in calculating the energy and the magnetisation can be significantly reduced while averaging over more samples if we compute the energy at start of simulation and just update the energy and the magnetisation due to the change in the single spin.  </li>
+<li>Implementation to compute the data for a single temperature point, can be parallelised. A nice library for this that uses CPU cores is the module <a href="https://pymotw.com/2/multiprocessing/basics.html">multiprocessing</a>.<ul>
+<li>Note that we are parallelising the multiple calls to <code>simulate</code>, and not parallelising the flipping of spins.  Parallelising the flipping of spins by replacing the element operations in <code>simulate</code> array would result in a huge speedup but would break the Monte Carlo assumption of individual spins occurring and can lead to cyclic effects. There is a fix for this but that is for another day.</li>
+</ul>
+</li>
+</ul>
+		
+		<ul class="pager">
+			
+			<li class="previous"><a href="00-Outline.html">&larr; Previous (Outline)</a></li>
+			
+			
+			
+			<li class="next"><a href="02-2D_Model.html">Next (2D Model) &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>

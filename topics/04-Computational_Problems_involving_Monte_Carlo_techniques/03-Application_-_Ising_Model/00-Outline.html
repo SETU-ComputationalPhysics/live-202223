@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Computational Physics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192450" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192450" target="_blank"><img height="18pt" src="../../../style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+										<li >
+											<a href="../../../topics/01-Exploratory_Data_Analysis/index.html">Exploratory Data Analysis</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Computational_Problems_Involving_Probability/index.html">Computational Problems Involving Probability</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Computational_Problems_involving_Marko_Chains/index.html">Computational Problems involving Marko Chains</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html">Computational Problems involving Monte Carlo techniques</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html#01-Introduction_to_Monte_Carlo">Introduction to Monte Carlo</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html#02-Application_-_Reactor_Shield">Application - Reactor Shield</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/04-Computational_Problems_involving_Monte_Carlo_techniques/index.html#03-Application_-_Ising_Model">Application - Ising Model</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+										<li >
+											<a href="01-1D_Model.html">1D Model</a>
+										</li>
+										
+										<li >
+											<a href="02-2D_Model.html">2D Model</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next"><a href="01-1D_Model.html">Next (1D Model) &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>2D Ising Model</h1>
+<h2>Introduction</h2>
+<p>Simulate the 2D Ising model and estimate the critical time at which phase transition occurs.</p>
+<h2>Details</h2>
+<p>The Ising model is a very simple system that exhibits many of the characteristics of physical systems of large numbers of particles. In this lesson we will use the Ising model to investigate a phase transition between randomly ordered domains and uniformly aligned domains, representing the transition into ferromagnetism.</p>
+<p>You are probably aware of the magnetisation properties of iron, and in particular the phase transition that occurs at 1000 K. Above this temperature, iron is no longer ferromagnetic. Instead, the individual domains of aligned atoms within the iron become randomly oriented. While the ferromagnetic and non-ferromagnetic behaviours are fundamentally different,  both behaviours and the transition between can be modelled using the Ising model. The Ising model was first used in the 1920s to study this phase transition in ferromagnetism. </p>
+<p>The n-D Ising model consists of an n-dimensional lattice of spins, which, in our application can either be up or down.</p>
+<figure>
+  <img src="files/1D_Ising.png" alt="Ising Model" width="40%" >
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="files/2D_Ising.png" alt="Ising Model" width="40%" >
+  <figcaption>1D and 2D Ising Model (5x5 square grid).</figcaption>
+</figure>
+
+<p>Imagine each of these spins was a tiny bar magnet, and all the magnets were aligned. If you tried to flip one of the magnets, you would have to do work on the system because you are fighting against the magnetic field of the neighbouring magnets; the magnets prefer to be aligned. We can model this effect by assuming that individual spins interact with their nearest neighbours, resulting in an interaction energy than depends on the relative alignment of the spins. If the individual spins can take on values of +1 or -1 (corresponding to up or down), we can write the total energy of the system as:</p>
+<p>\[
+    E = -J \sum_{\begin{array}{c}\text{all cells}\\\text{\(i\)}\end{array}} \sum_{\begin{array}{c}\text{neighbours}\\ \text{of cell \(i\)}\end{array}} s_i s_j
+\]</p>
+<p>where the summation is over all (2 for 1D, 4 for 2D, 6 for 3D) the pairs of nearest neighbours in the system, and the 1/2 factor is to deal with counting spins twice. The parameter \(J\) is known as the exchange energy, and if this constant is positive, the spins prefer to be aligned. If you try to flip one spin in the system, you can use this equation to calculate the change in the energy of the entire system due to that spin flip. For instance, consider a random box in our lattice of spins, along with its four nearest neighbours:</p>
+<figure>
+  <img src="files/onecell.png" alt="Effect of a single cell change" width="304" >
+  <figcaption>Effect of a single cell change.</figcaption>
+</figure>
+
+<p>Flipping the spin in this box would change the total energy of the whole system through the contribution of the interaction energy with its four nearest neighbours. Before flipping, this contribution is</p>
+<p>\[
+E_{before} = -J \frac{1}{2} \cdot (+1) \cdot ( -1 -1 -1 +1) = +2J
+\]</p>
+<p>corresponding to 3 neighbours aligned with the spin in the centre cell (hence lower - negative - energy) and one spin aligned in the opposite direction (a high potential energy). After flipping, the contribution to the total energy of this cell would be</p>
+<p>\[
+    E_{after} = -J \cdot (-1) \cdot ( - 1 - 1 - 1 + 1) = -2J
+\]</p>
+<p>The change in the total energy of the system after flipping this one cell would be</p>
+<p>\[
+    E_{\text{flip}} = E_{\text{after}} - E_{\text{before}} = -4J
+\]</p>
+<p>So, if \(J\) is positive, this would decrease the energy of the system and hence it would be an energetically favourable change.</p>
+<p>If this was all that was involved &mdash; driving the system to the lowest energy state &mdash; the end result would simply be all the cells aligned with each other. 
+If \(E_{\text{flip}} &gt; 0\) the process would require an input of energy into the system; this is where the concept of energy comes in. 
+The basic idea is that the thermal energy of the system provides the means for flipping spins when \(E_{\text{flip}} &gt; 0\). 
+If the temperature is high (\(k_{B}T\) is high relative to \(E_{\text{flip}}\)), it will be easy to make energetically unfavourable flips because there is plenty of thermal energy available. 
+Conversely, if the temperature is low, spins are not likely to flip when \(E_{\text{flip}} &gt; 0\).
+Here \(k_B\) is Boltzmann's constant.</p>
+<p>To implement this concept of thermal spin flips, we need to know the probability that a given (unfavourable) spin flip will occur as a function of temperature. We begin with the fundamental result of statistical mechanics that for a system in equilibrium with a heat bath at temperature \(T\), the probability of finding the system in any particular state \(m\) of energy \(E_m\) is proportional to the Boltzmann factor</p>
+<p>\[
+    p =  e^{ - E_m/ (k_{B} T) }
+\]</p>
+<p>Hence, the probability of a system transitioning from a lower energy state (2) to a higher energy state (1) is given by</p>
+<p>\[
+P = e^{-(E_1 - E_2)/ (k_B T)}
+\]</p>
+<p>Before we outline the simulation algorithm we need to focus on the issue of boundary cell behaviour. For example in the 2D model corner cells have only two neighbours, while other edge cells have three neighbours.   Here we have a few options:</p>
+<ul>
+<li>Tweak flip probabilities to reflect the different number of neighbours.</li>
+<li>Only simulate interior cells and ignore the boundary cells. Works better for larger grids.</li>
+<li>"Remove boundaries" by introducing periodic boundaries. For example, a cell on the left hand side of the lattice would have a left-hand neighbour that corresponds to the right-most cell on the lattice, and similarly for top and bottom boundary cells.  <br />
+   This removes the boundary effects and is relatively easy to implement (see 1D implementation.)</li>
+</ul>
+<p>The algorithm for our Ising model should look something like this:</p>
+<ol>
+<li>Declare and initialise a nD array of integers <strong>model = ((nmax,nmax))</strong></li>
+<li>Flip lots (thousands) of spins<ol>
+<li>Choose a random cell, e.g., \((i,j)\) to decide to flip</li>
+<li>Calculate \(E_{flip}\) based on its neighbours</li>
+<li>If \(E_{flip} &lt; 0\) then flip the spin</li>
+<li>If \(E_{flip} &gt; 0\) then<ol>
+<li>Calculate the probability of flipping</li>
+<li>If <strong>np.random()</strong> &lt; Probability then flip the spin</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2>Tasks / Submission</h2>
+<p>To help you implement this simulation I have broken it into separate tasks with expected output.</p>
+<ul>
+<li><a href="01-1D_Model.html">1D Model</a></li>
+<li><a href="02-2D_Model.html">2D Model</a></li>
+</ul>
+<p>Create a colab notebook implementing the above tasks, reproducing the stated output. Download notebook and upload to Moodle using the following link</p>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=000000" role="button">Submit using Moodle</a>
+</div>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next"><a href="01-1D_Model.html">Next (1D Model) &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
